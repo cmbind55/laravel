@@ -32,39 +32,45 @@ class DatatablesController extends Controller
     {
         Log::debug('DatatablesController:anyData() reached.');
 
-	    // $id = "9UCULY09";
-	    // $clash = new Clash();
-	    // $data = $clash->getClan($id)->getLeaders();
+	    $id = "9UCULY09";
+	    $clash = new Clash();
+	    $data = $clash->getClan($id)->getLeaders();
+
+		foreach($data as &$value)
+		{
+			$value->league = $value->league->name;
+		}
+
 	    // echo '<pre>'; print_r($data); echo '</pre>';
 
-       	$faker = Faker\Factory::create();
+       	// $faker = Faker\Factory::create();
 
-		$data  = [];
-		for ($i = 0; $i < 10; $i++) {
-			$obj = new \stdClass;
-			$obj->tag = $i + 1;
-			$obj->name = $faker->name;
-			$obj->role = $faker->email;
-			$obj->expLevel = $faker->numerify('###');
-			$obj->league = $faker->numerify('###');
-			$obj->trophies = $faker->numerify('###');
-			$obj->clanRank = $faker->numerify('###');
-			$obj->previousClanRank = $faker->numerify('###');
-			$obj->donations = $faker->numerify('###');
-			$obj->donationsReceived = $faker->numerify('###');
-			$data[] = $obj;
-           // { data: 'tag', name: 'id' },
-           //  { data: 'name', name: 'name' },
-           //  { data: 'role', name: 'email' },
-           //  { data: 'expLevel', name: 'expLevel' },
-           //  { data: 'league', name: 'league' },
-           //  { data: 'trophies', name: 'trophies' },
-           //  { data: 'clanRank', name: 'clanRank' },
-           //  { data: 'previousClanRank', name: 'previousClanRank' },
-           //  { data: 'donations', name: 'donations' }
-           //  { data: 'donationsReceived', name: 'donationsReceived' }
+		// $data  = [];
+		// for ($i = 0; $i < 10; $i++) {
+		// 	$obj = new \stdClass;
+		// 	$obj->tag = $i + 1;
+		// 	$obj->name = $faker->name;
+		// 	$obj->role = $faker->email;
+		// 	$obj->expLevel = $faker->numerify('###');
+		// 	$obj->league = $faker->numerify('###');
+		// 	$obj->trophies = $faker->numerify('###');
+		// 	$obj->clanRank = $faker->numerify('###');
+		// 	$obj->previousClanRank = $faker->numerify('###');
+		// 	$obj->donations = $faker->numerify('###');
+		// 	$obj->donationsReceived = $faker->numerify('###');
+		// 	$data[] = $obj;
+  //          // { data: 'tag', name: 'id' },
+  //          //  { data: 'name', name: 'name' },
+  //          //  { data: 'role', name: 'email' },
+  //          //  { data: 'expLevel', name: 'expLevel' },
+  //          //  { data: 'league', name: 'league' },
+  //          //  { data: 'trophies', name: 'trophies' },
+  //          //  { data: 'clanRank', name: 'clanRank' },
+  //          //  { data: 'previousClanRank', name: 'previousClanRank' },
+  //          //  { data: 'donations', name: 'donations' }
+  //          //  { data: 'donationsReceived', name: 'donationsReceived' }
 
-		}
+		// }
 
 	    // echo '<pre>'; print_r($data); echo '</pre>';
 
