@@ -62,11 +62,16 @@ Route::get('/leaders', function () {
     $leaders = $clash->getClan($id)->getLeaders();
     // $clans = \Clash::getClan($id);
 
-    print_r($leaders);
+    echo '<pre>'; print_r($leaders); echo '</pre>';
 
     return view('leaders', compact('leaders'));
 
 });
+
+Route::controller('datatables', 'DatatablesController', [
+    'anyData'  => 'datatables.data',
+    'getIndex' => 'datatables',
+]);
 
 
 

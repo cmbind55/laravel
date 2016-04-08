@@ -7,15 +7,17 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "raphaelb/clashofapi": "~2.1"
+        "raphaelb/clashofapi": "~2.1",
+        "yajra/laravel-datatables-oracle": "^6.10",
+        "fzaninotto/faker": "^1.5"
     },
     "require-dev": {
-        "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "raphaelb/clashofapi": "~2.1",
         "symfony/css-selector": "2.8.*|3.0.*",
-        "symfony/dom-crawler": "2.8.*|3.0.*"
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "fzaninotto/faker": "^1.5"
     },
     "autoload": {
         "classmap": [
