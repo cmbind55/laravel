@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <table class="table table-bordered" id="users-table">
+    <table class="table table-striped table-bordered" id="users-table">
         <thead>
             <tr>
                 <th>tag</th>
@@ -23,7 +23,7 @@
 <script>
 $(function() {
     $('#users-table').DataTable({
-        processing: true,
+        processing: false,
         serverSide: true,
         ajax: '{!! route('datatables.data') !!}',
         columns: [
